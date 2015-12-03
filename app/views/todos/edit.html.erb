@@ -1,0 +1,21 @@
+<h1> Edit Task </h1>
+<%= form_for @todo do |f| %>
+  <%= f.label :item, :class => "form"  %> 
+  <%= f.text_field :item, :class => "form"  %>
+<br />
+<br />
+  <%= f.label :priority, :class => "form" %> 
+  <%= f.select :priority, Todo.priorities.keys.to_a, :class => "form" %>
+<br />
+<br />
+  <%= f.label :description, :class => "form" %> 
+  <%= f.text_area :description, :class => "form" %>
+<br />
+<br />
+  <%= f.label :completion, :class => "form" %>
+  <%= f.check_box :completion, :class => "form" %>
+<br />
+<br />
+	<%= yield %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,5 @@
+<%= form_tag todos_path, :method => :put do %>
+<% @todo.each do |add| %>
+  <td><%= check_box_tag "completion[]", add.id %></td>
+    <% end %>
+<% end %>

@@ -1,0 +1,24 @@
+<h1> Tasks</h1>
+<p><%= link_to 'New Task', new_todo_path %></p>
+<% @todos.reverse_each do |todo| %>
+	<table>
+	  <tr>
+	    <th></th>
+	    <th>Priority</th> 
+	    <th>Completion</th>
+	  </tr>
+	  <tr>
+	    <td class="task"><h3><%= todo.item %></h3></td>
+	    <td><%= todo.priority %></td> 
+	    <td><%= todo.completion%></td>
+	  </tr>
+	</table>
+	<p class="description"><%= todo.description %></p>
+	<%= link_to 'See Task', todo_path(todo) %>  |
+	<%= link_to 'Edit Task', edit_todo_path(todo) %>  |
+	<%= link_to 'Delete Task', todo_path(todo), method: :delete %>
+<% end %>
+
+
+
+

@@ -1,0 +1,8 @@
+<h1>Todo</h1>
+<ul >
+	<li class="list-inline"><h3><%= @todo.item %></h3></li>
+	<li class="list-inline"><h4><%= @todo.priority %></h4></li>
+	<li class="list-inline"><h4><%= @todo.completion%></h4></li>
+</ul>
+<p><%= @todo.description %></p>
+<%= link_to 'Back', todos_path %>
